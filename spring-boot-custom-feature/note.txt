@@ -1,0 +1,29 @@
+Text to ASCII Art Generator
+----------------------------
+http://patorjk.com/
+
+
+
+Spring Boot Banner
+-----------------------
+a. Spring boot banner can be configured programmatically by custom feature or by application.properties
+
+
+Application Context Hierarchy
+-----------------------------
+Ref : 
+1. https://stackoverflow.com/questions/5132604/why-use-spring-applicationcontext-hierarchies
+
+Each Spring MVC webapp has one root application context and one servlet application context for each DispatcherServlet. 
+The root application context is the parent of each servlet application context. 
+Beans defined in "contextConfigLocation" (context-param in web.xml) are loaded into root application context. 
+Beans in <servlet-name>-servlet.xml are loaded into servlet application context. 
+If an EAR has multiple web apps, an EAR level application context can parent the root context of each webapp in EAR.
+
+2. http://javafreakers.com/application-context-level-hierarchy-in-spring-web-application/
+
+3. Book Pro Spring Boot, ch03, page 57
+In Spring Boot,  if you have a web configuration, make sure it’s being declared as a child. 
+All the web configuration must depend on a main Spring context, which is why it needs to be declared as a child. 
+Also parent and children must share the same org.springframework.core.Environment interface 
+(this represents the environment in which the current application is running and is related to profiles and properties declarations).
