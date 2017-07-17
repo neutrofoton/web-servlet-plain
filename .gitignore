@@ -12,3 +12,7 @@ MANIFEST.MF
 RemoteSystemsTempFiles
 bin
 /.metadata/
+
+**/.gradle
+**/.mvn
+**/.DS_Store
