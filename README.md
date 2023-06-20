@@ -1,7 +1,8 @@
 # Step create project :
 
 1. Create project with maven :
-   a. Eclipse way : File > New > Maven Project > etc...
+
+   a. Eclipse way : File > New > Maven Project > etc... <br/>
    b. Maven command : 
       ``` bash
       $ mvn archetype:create -DgroupId=com.neutrofoton.j2ee -DartifactId=simple-web-app -DarchetypeArtifactId=maven-archetype-webapp
